@@ -1,0 +1,32 @@
+.buttonGreen{
+    background-color: #1abc9c;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.7s;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    border-bottom: #15987e 3px solid;
+
+}
+.buttonGreen:hover {
+    border-color: #1abc9c;
+    background: #15987e;
+}
+.buttonGreen__title{
+    color:#fff;
+    font-size: 14px;
+    font-family: Montserrat,sans-serif;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+    user-select: none;
+}
+.buttonGreen__icon img{
+    height: 25px;
+    margin: 5px;
+}

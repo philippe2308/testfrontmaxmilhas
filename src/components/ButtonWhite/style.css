@@ -1,0 +1,45 @@
+.buttonWithe{
+    background-color: #fff;
+    cursor: pointer;
+    height: 40px;
+    width: auto;
+    float: left;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.buttonWithe:hover .buttonWithe__title {
+    color: #1abc9c;
+}
+.buttonWithe__title{
+    color:#879395;
+    font-size: 14px;
+    font-family: Montserrat,sans-serif;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+    user-select: none;
+    transition: color 2s;
+}
+.buttonWithe__icon img{
+    height: 25px;
+    margin: 5px;
+}
+
+.buttonWithe:hover .buttonWithe__icon__circle {
+    border-color: #1abc9c;
+}
+.buttonWithe__icon__circle{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: rgb(216,220,222) 3px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:5px;
+    transition: border-color 2s;
+}
