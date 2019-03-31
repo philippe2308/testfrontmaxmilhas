@@ -312,7 +312,7 @@ export class FormSearch extends React.Component {
                   children:children,
                   infants:baby
                 }) 
-              }}  title={"Pesquisar"}/>
+              }}  title={""} fullWidth/>
             {
               //icon={require('../../assets/icons/coins.png')}
             }

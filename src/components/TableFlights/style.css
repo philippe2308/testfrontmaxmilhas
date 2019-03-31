@@ -1,9 +1,6 @@
-.table{
-    width: calc(100% - 300px );
-    margin: 10px;
-}
+
 .cardHeaderTable{
-    width: calc(100% / 6);
+    flex:1;
     border-left:1px solid rgb(117,129,131);
     display: flex;
     align-items: center;
@@ -21,15 +18,27 @@
     border-top-right-radius: 5px;
 }
 
-.rowTable{
+.rowTable--web{
     display: flex;
     flex-direction: row;
     background-color: #fff;
-    margin-bottom: 10px;    
+    border: 1px solid #fff;
+    transition: 0.7s;
 }
-
+.rowTable{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #fff;
+    transition: 0.7s;
+    margin-bottom: 10px;
+}
+.rowTable:hover{
+    
+    border-color: #1abc9c;
+}
 .cardRowTable{
-    width: calc(100% / 6);
+    flex:1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,6 +46,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 .cardRowTable__title{
     color: rgb(135,147,149);;
     font-size: 12px;
@@ -46,4 +56,96 @@
 .cardRowTable__subTitle{
     color: rgb(135,147,149);;
     font-size: 12px;
+}
+.cardRowTable--detail{
+    color: rgb(135,147,149);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid rgb(135,147,149);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.cardRowTable--detail:hover {
+    background-color: rgba(135,147,149,0.2);
+}
+
+.cardRowTable__savingPercentage{
+    color: rgb(241,175,11);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.cardRowTable--priceAirline{
+    color: rgb(135,147,149);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: line-through;
+}
+
+.headerTable__web{
+    display: flex;
+}
+
+
+
+.cardTable--app{
+
+    border: 0px dotted rgb(135,147,149);
+    border-top: 1px dotted rgb(135,147,149);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  
+.cardTable--web{
+      display: none !important;
+    }
+    .table{
+        flex:1;
+        margin: 10px;
+    }
+    
+    .cardRowTable--detail{
+        
+        border: 0px dotted rgb(135,147,149);
+        color: rgb(135,147,149);
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 0px;
+        width: calc(100% - 30px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.7s;
+    }
+}
+@media screen and (min-width: 993px) {
+
+    .form__app, .cardTable--app{
+    display: none !important;
+    }
+    .table{
+        width: calc(100% - 300px );
+        margin: 10px;
+    }
+    
+    .cardRowTable--detail{
+        color: rgb(135,147,149);
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: 1px solid rgb(135,147,149);
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+        transition: 0.7s;
+    }
 }

@@ -17,9 +17,6 @@ class SearchFlights extends React.Component {
     }
 
   componentDidMount(){
-    window.addEventListener("resize", this.resize.bind(this));
-    this.resize();
-
     this.searchFlights({ 
       from: 'CNF',  //origem
       to: 'BSB',  //destino
@@ -32,18 +29,15 @@ class SearchFlights extends React.Component {
 
     });
   }
-  resize() {
-    this.setState({windowHeight:window.innerHeight});
-  }
 
   searchFlights(data){
     this.props.searchFlights(data);
   }
 
   render(){
-      const{tabActived,windowHeight}=this.state;
+      const{tabActived}=this.state;
       const{inbound,outbound}=this.props.SearchFlightsReducer;
-      return(<div  style={{height:windowHeight, backgroundColor: 'rgb(237,243,248)'}}>
+      return(<div  style={{backgroundColor: 'rgb(237,243,248)'}}>
             <Header/>
             <FormSearch onClickSearchFlights={(data)=>this.searchFlights(data)}/>
             <MenuTab tabActived={tabActived} onClickTab={(tabIndex)=>this.setState({tabActived:tabIndex})}/>

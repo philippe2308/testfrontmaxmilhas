@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.css';
 
-export const ButtonGreen = ({title, icon,onClick}) => {
+export const ButtonGreen = ({title, icon,onClick,fullWidth}) => {
   
     return (
-        <div className="buttonGreen" onClick={()=>onClick()}>
+        <div className={`buttonGreen ${(fullWidth)?'fullWidth':''}`} onClick={()=>onClick()}>
             <div className={"buttonGreen__icon"}>
                     <img  alt="" src={icon} />
             </div>

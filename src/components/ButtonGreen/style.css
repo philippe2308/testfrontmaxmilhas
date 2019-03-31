@@ -12,6 +12,11 @@
     border-bottom: #15987e 3px solid;
 
 }
+.fullWidth{
+    padding-left: 0px;
+    padding-right: 0px;
+    width:calc(100% - 0px);
+}
 .buttonGreen:hover {
     border-color: #1abc9c;
     background: #15987e;
