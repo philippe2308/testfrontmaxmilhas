@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.css';
 
-export const ButtonGreen = ({title, icon}) => {
+export const ButtonGreen = ({title, icon,onClick}) => {
   
     return (
-        <div className="buttonGreen">
+        <div className="buttonGreen" onClick={()=>onClick()}>
             <div className={"buttonGreen__icon"}>
                     <img  alt="" src={icon} />
             </div>

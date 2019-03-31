@@ -189,7 +189,19 @@ export class FormSearch extends React.Component {
             }
           />
           <div className="form__cardButton">
-            <ButtonGreen ButtonWhite  title={"Pesquisar"}/>
+            <ButtonGreen onClick={
+              ()=>{
+                this.props.onClickSearchFlights({
+                  from:airportDeparture.airportCode,
+                  to:airportArravie.airportCode,
+                  outboundDate:moment(departureDate).format('YYYY-MM-DD'),
+                  inboundDate:moment(returnDate).format('YYYY-MM-DD'),
+                  cabin:"EC",
+                  adults:adult,
+                  children:children,
+                  infants:baby
+                }) 
+              }}  title={"Pesquisar"}/>
             {
               //icon={require('../../assets/icons/coins.png')}
             }
@@ -287,6 +299,24 @@ export class FormSearch extends React.Component {
               />
             }
           />
+          <div className="form__cardButton">
+            <ButtonGreen onClick={
+              ()=>{
+                this.props.onClickSearchFlights({
+                  from:airportDeparture.airportCode,
+                  to:airportArravie.airportCode,
+                  outboundDate:moment(departureDate).format('YYYY-MM-DD'),
+                  inboundDate:moment(returnDate).format('YYYY-MM-DD'),
+                  cabin:"EC",
+                  adults:adult,
+                  children:children,
+                  infants:baby
+                }) 
+              }}  title={"Pesquisar"}/>
+            {
+              //icon={require('../../assets/icons/coins.png')}
+            }
+          </div>
         </div>
       </div>
     );
