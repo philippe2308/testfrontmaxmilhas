@@ -6,7 +6,7 @@ export const Select = ({options, value, onChange}) => {
     return (
         <div className="select"  value={value} onChange={onChange}>
             <select>    
-                {options.map(option=><option value={option}>{option}</option>)}
+                {options.map(option=><option key={option} value={option}>{option}</option>)}
             </select>
         </div>
     );

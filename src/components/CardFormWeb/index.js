@@ -31,7 +31,7 @@ export const CardFormWeb = ({title, icon, mainText, subText, subSubText, textIco
                     <img  alt="" src={icon} />
                 </div>
             </div>
-            {(actived)?<div className="teste">
+            {(actived)?<div className="expanded__web">
                 {expandedPanel}
             </div>:null}
         </div>

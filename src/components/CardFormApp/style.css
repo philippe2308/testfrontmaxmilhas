@@ -45,3 +45,14 @@
     margin-bottom: 2px;
     height: 14px;
 }
+
+.expanded__app{
+    width: calc(100% - 10px);
+    left: 5px;
+    border:1px solid #1abc9c;
+    border-top:0px solid #1abc9c;
+    top: 123px;
+
+    position: absolute;
+    z-index: 1000000px;
+}

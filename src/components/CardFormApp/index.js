@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.css';
 
-export const CardFormApp = ({icon, mainText, text}) => {
+export const CardFormApp = ({onClick, icon, mainText, text, actived, expandedPanel}) => {
   
     return (
-        <div className="cardFormApp flexrow">
+        <div onClick={()=>onClick()} className="cardFormApp flexrow">
             <div className="flexrow alingCenter">
             <div className="cardFormApp__icon">
                 <img  alt="" src={icon} />
@@ -16,6 +16,9 @@ export const CardFormApp = ({icon, mainText, text}) => {
                 {text}
             </div>
             </div>
+            {(actived)?<div className="expanded__app">
+                {expandedPanel}
+            </div>:null}
         </div>
     );
   }

@@ -2,24 +2,39 @@ import React from 'react';
 import {SelectPassengers} from './../Select';
 import './style.css';
 
-export const Passengers = ({}) => {
-    const numbers=[1,2,3,4,5,6,7,8,9,10]
+export const Passengers = ({
+    adult,
+    children,
+    baby,
+    onChangeAdult,
+    onChangeChildren,
+    onChangeBaby
+    }) => {
     return (
         <div>
                 <SelectPassengers
                     title={"Adultos"}
-                    options={numbers}
+                    options={[...Array(11).keys()].slice((children+baby===0)?1:children+baby)}
+                    value={adult}
+                    onChange={onChangeAdult}
                 />
                 <SelectPassengers
                     title={"Crianças"}
                     subTitle={"2 a 11 anos"}
-                    options={[0,...numbers]}
+                    options={[...Array(adult-baby+1).keys()]}
+                    value={children}
+                    onChange={onChangeChildren}
                 />
                 <SelectPassengers
                     title={"Bebês"}
                     subTitle={"0 a 23 meses"}
-                    options={[0,...numbers]}
+                    options={[...Array(adult-children+1).keys()]}
+                    value={baby}
+                    onChange={onChangeBaby}
                 />
+                <div className="info">
+                    A quantidade de crianças e bebês deve ser igual a quantidade de adultos.
+                </div>
         </div>
     );
   }
