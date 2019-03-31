@@ -1,0 +1,47 @@
+*{
+    white-space: nowrap;
+}
+
+.alingCenter{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.cardFormApp{
+    /*border-left: rgb(216,220,222) 1px solid;*/
+    border-right: rgb(216,220,222) 1px solid;
+    padding:10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex: 1;
+    
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    /*min-width: calc(100% / 6);*/
+}
+.cardFormApp__text--main{
+    font-size: 12px;
+    font-weight: 800;
+    color: #879395;
+    text-transform: uppercase;
+}
+.cardFormApp__text{
+    font-size: 12px;
+    color: #879395;
+    text-transform: uppercase;
+}
+
+.cardformweb__rightcontent{
+    margin-left: 10px;
+}
+.cardFormApp__icon img{
+    margin-right: 5px;
+    margin-bottom: 2px;
+    height: 14px;
+}

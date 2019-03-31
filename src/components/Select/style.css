@@ -1,0 +1,37 @@
+
+.select select{
+    border: #879395 1px solid;
+    padding: 10px;
+    font-weight: 800;
+    color: #879395;
+    border-radius: 4px;
+
+}
+
+.selectPassengers{
+    display: flex;
+    flex:1;
+    justify-content: space-between;
+    padding: 15px;
+    flex-direction: row;
+}
+
+.selectPassengers__label{
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.selectPassengers__label__title{
+    font-weight: 800;
+    color: #879395;
+    font-size: 18px;
+
+}
+
+.selectPassengers__label__subTitle{
+    color: #879395;
+    font-size: 14px;
+}

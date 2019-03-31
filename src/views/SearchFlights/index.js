@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {Header} from './../../components/Header';
-import {FormSearch} from './../../components/FormSearch';
+import {FormSearch} from './../FormSearch';
 
 class SearchFlights extends React.Component {
     

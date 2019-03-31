@@ -1,0 +1,29 @@
+
+.input__label{
+    font-style:italic;
+    color: #879395;
+    padding: 10px;
+}
+.input__textField{
+    padding: 10px;
+    padding-top: 0px;
+    font-size: 20px;
+    margin:5px;
+    margin-top: 0px;
+    font-weight: 700;
+    color: #879395;
+    border: 0px solid #879395;
+    border-bottom: 2px solid #879395;
+    transition: border 0.7s;
+    width: calc(100% - 30px);
+}
+
+.input__textField:focus {
+    font-size: 20px;
+    font-weight: 700;
+    color: #879395;
+    border: 0px solid #879395;
+    border-bottom: 2px solid #1abc9c;
+    box-shadow: none;
+    outline: 0;
+}

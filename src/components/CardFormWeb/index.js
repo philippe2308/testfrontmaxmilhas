@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.css';
 
-export const CardFormWeb = ({title, icon, mainText, subText, subSubText, textIcon}) => {
+export const CardFormWeb = ({title, icon, mainText, subText, subSubText, textIcon, actived, onClick, expandedPanel}) => {
   
     return (
-        <div className="cardformweb">
+        <div onClick={()=>onClick()} className="cardformweb">
             <div className="flexcolumn">
                 <div className="cardformweb__title">
                     {title}
@@ -31,6 +31,9 @@ export const CardFormWeb = ({title, icon, mainText, subText, subSubText, textIco
                     <img  alt="" src={icon} />
                 </div>
             </div>
+            {(actived)?<div className="teste">
+                {expandedPanel}
+            </div>:null}
         </div>
     );
   }

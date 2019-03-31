@@ -1,0 +1,36 @@
+.cardAirport{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    padding: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: rgba(136, 147, 149, 0.5) 1px solid;
+    transition: 0.7s;
+}
+.input__label{
+    font-style:italic;
+    color: #879395;
+}
+.airport__name{
+    font-size: 14px;
+    font-weight: 700;
+    color: #879395;
+}
+.airport__code{
+    font-size: 14px;
+    font-weight: 500;
+    color: #879395;
+}
+
+.cardAirport:hover {
+    background: rgba(136, 147, 149, 0.1);
+    color:#1abc9c;
+}
+.cardAirport:hover div{
+    color:#1abc9c;
+}
+.cardAirport div{
+    transition: 0.7s;
+}

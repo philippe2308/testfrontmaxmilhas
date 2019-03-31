@@ -9,6 +9,13 @@
     align-items: flex-end;
     justify-content: space-between;
     flex: 1;
+    
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
     /*min-width: calc(100% / 6);*/
 }
 .flexcolumn{
@@ -53,9 +60,17 @@
 }
 
 .cardformweb__rightcontent{
-    height: 100%;
     margin-left: 10px;
 }
 .cardformweb__rightcontent__icon img{
     height: 20px;
+}
+.teste{
+    width: 300px;
+    border:1px solid #1abc9c;
+    border-top:0px solid #1abc9c;
+    top: 134px;
+    margin-left: -11px;
+    position: absolute;
+    z-index: 1000000px;
 }

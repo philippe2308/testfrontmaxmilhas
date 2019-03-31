@@ -20,10 +20,23 @@
     flex-direction: row;
     flex: 1;
 }
+
+.form__app{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
 @media screen and (max-width: 992px) {
   
     .form__web {
       display: none !important;
     }
     
-  }
+}
+@media screen and (min-width: 992px) {
+
+    .form__app {
+    display: none !important;
+    }
+    
+}

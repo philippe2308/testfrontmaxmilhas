@@ -22,7 +22,7 @@
    -webkit-user-select: none;
    -ms-user-select: none;
     user-select: none;
-    transition: color 2s;
+    transition: color 0.7s;
 }
 .buttonWithe__icon img{
     height: 25px;
@@ -41,5 +41,5 @@
     align-items: center;
     justify-content: center;
     margin:5px;
-    transition: border-color 2s;
+    transition: border-color 0.7s;
 }
