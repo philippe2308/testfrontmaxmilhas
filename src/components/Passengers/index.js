@@ -1,14 +1,16 @@
 import React from 'react';
-import {SelectPassengers} from './../Select';
+import {SelectPassengers,SelectCabin} from './../Select';
 import './style.css';
 
 export const Passengers = ({
     adult,
     children,
     baby,
+    cabin,
     onChangeAdult,
     onChangeChildren,
-    onChangeBaby
+    onChangeBaby,
+    onChangeCabin
     }) => {
     return (
         <div>
@@ -35,6 +37,12 @@ export const Passengers = ({
                 <div className="info">
                     A quantidade de crianças e bebês deve ser igual a quantidade de adultos.
                 </div>
+                <SelectCabin
+                    title={"Classe do voo"}
+                    options={[{id:'EC',label:'Classe econômica'},{id:'EX',label:'Classe executiva'}]}
+                    value={cabin}
+                    onChange={onChangeCabin}
+                />
         </div>
     );
   }

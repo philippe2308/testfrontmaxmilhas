@@ -51,7 +51,6 @@ const CardDetailRowTable =({web,app}) => {
 
 
 const CardPriceRowTable =({price, web, app}) => {
-    console.log(price);
     const bestPrice=(price.bestPriceAt==='airline')?price.airline:(price.bestPriceAt==='miles')?price.miles:price.ota;
     return (
         <div className={`cardRowTable  ${app?'cardTable--app':''}  ${web?'cardTable--web':''}`} style={{minWidth:200}}>

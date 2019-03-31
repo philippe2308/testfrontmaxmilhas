@@ -25,7 +25,6 @@ export const SearchFlightsReducer = (state = initialState, action) => {
       
       outbound.push(...action.newValue.outbound);
 
-      console.log(inbound);
       return {
         ...state,
         inbound:inbound,

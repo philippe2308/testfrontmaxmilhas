@@ -1,0 +1,17 @@
+
+.alert{
+    font-weight: 700;
+    color: #FFF;
+    padding: 14px;
+    position: absolute;
+    bottom: 50px;
+    background: #933;
+    text-align: center;
+    width: calc(80% - 60px);
+    left: calc(10%);
+    padding:30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 5px;
+    white-space: normal!important;
+}

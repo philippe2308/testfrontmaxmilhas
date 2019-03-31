@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-export const CardFormWeb = ({title, icon, mainText, subText, subSubText, textIcon, actived, onClick, expandedPanel}) => {
+export const CardFormWeb = ({title, icon, mainText, subText, subSubText, textIcon, actived, onClick, expandedPanel, closeExpandedPanel}) => {
   
     return (
         <div onClick={()=>onClick()} className="cardformweb">
@@ -32,6 +32,8 @@ export const CardFormWeb = ({title, icon, mainText, subText, subSubText, textIco
                 </div>
             </div>
             {(actived)?<div className="expanded__web">
+                <div className="expanded__close" onClick={closeExpandedPanel}>Fechar
+                </div>
                 {expandedPanel}
             </div>:null}
         </div>

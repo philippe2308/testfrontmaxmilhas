@@ -11,13 +11,13 @@ export const SearchAirport = ({label,value,onChange,selectAirport}) => {
         <div className="searchAirport">
             <Input label={label} value={value} onChange={(event)=>onChange(event.target.value)}/>
             {
-                Object.entries(airports).map((airport)=>{
+                Object.entries(airports).map((airport,index)=>{
                     if(count>=3||value===""||value===" "){
                         return null;
                     }
                     if(airport[1][0].toUpperCase().indexOf(value.toUpperCase())>=0||airport[1][1].toUpperCase().indexOf(value.toUpperCase())>=0){
                         count++;
-                        return <CardAirport onClick={()=>selectAirport(airport)} name={airport[1][0]} code={airport[1][1]}/>
+                        return <CardAirport key={index} onClick={()=>selectAirport(airport)} name={airport[1][0]} code={airport[1][1]}/>
                     }
                     return null
                     

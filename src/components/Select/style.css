@@ -35,3 +35,19 @@
     color: #879395;
     font-size: 14px;
 }
+
+.selectCabin__label__title{
+    color: #879395;
+    font-size: 14px;
+}
+
+.fullWidtSelect select{
+    width: calc(100% - 20px);
+    margin-top:10px;
+}
+
+.selectCabin{
+    border-top: 1px solid #879395;
+    flex-direction: column;
+    padding: 10px;
+}

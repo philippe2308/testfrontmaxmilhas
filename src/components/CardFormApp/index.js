@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-export const CardFormApp = ({onClick, icon, mainText, text, actived, expandedPanel}) => {
+export const CardFormApp = ({onClick, icon, mainText, text, actived, expandedPanel,closeExpandedPanel}) => {
   
     return (
         <div onClick={()=>onClick()} className="cardFormApp flexrow">
@@ -17,6 +17,8 @@ export const CardFormApp = ({onClick, icon, mainText, text, actived, expandedPan
             </div>
             </div>
             {(actived)?<div className="expanded__app">
+                <div className="expanded__close" onClick={closeExpandedPanel}>Fechar
+                </div>
                 {expandedPanel}
             </div>:null}
         </div>

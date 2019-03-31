@@ -16,7 +16,7 @@
     align-items: flex-end;
     justify-content: space-between;
     flex: 1;
-    
+    height: 40px;
    -moz-user-select: none;
    -khtml-user-select: none;
    -webkit-user-select: none;
@@ -57,4 +57,17 @@
 
     position: absolute;
     z-index: 1000000px;
+}
+
+.expanded__close{
+    font-style:italic;
+    color: #879395;
+    padding: 5px;
+    border: #879395 1px solid;
+    border-radius: 5px;
+    width: 70px;
+    text-align: center;
+    margin: 5px;
+    margin-left: calc(100% - 90px);
+    justify-content: center;
 }

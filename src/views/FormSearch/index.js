@@ -23,11 +23,11 @@ export class FormSearch extends React.Component {
       returnDate:new Date(),
       adult:1,
       children:0,
-      baby:0
+      baby:0,
+      cabin:'EC'
     }
   }
-  setDepartureAirport(airport){    
-    console.log(airport);
+  setDepartureAirport(airport){  
 
     let auxi=airport[1][0].indexOf('-');
     if(auxi<0){
@@ -42,7 +42,6 @@ export class FormSearch extends React.Component {
     });
   }
   setArravieAirport(airport){
-    console.log(airport);
 
     let auxi=airport[1][0].indexOf('-');
     if(auxi<0){
@@ -67,7 +66,8 @@ export class FormSearch extends React.Component {
       returnDate,
       adult,
       children,
-      baby
+      baby,
+      cabin
     }=this.state;
     moment.locale('pt-BR');
     return (
@@ -86,6 +86,9 @@ export class FormSearch extends React.Component {
                 }
               }
             }
+            closeExpandedPanel={()=>{
+                this.setState({cardWebActived:-1});
+            }}
             expandedPanel={
               <SearchAirport 
                 label="Sair de" 
@@ -108,6 +111,9 @@ export class FormSearch extends React.Component {
                 }
               }
             }
+            closeExpandedPanel={()=>{
+                this.setState({cardWebActived:-1});
+            }}
             expandedPanel={
               <SearchAirport 
                 label="Ir para"
@@ -130,6 +136,9 @@ export class FormSearch extends React.Component {
                 }
               }
             }
+            closeExpandedPanel={()=>{
+                this.setState({cardWebActived:-1});
+            }}
             expandedPanel={
               <DatePicker
                 onChange={(date)=>this.setState({cardWebActived:-1, departureDate:date})}
@@ -150,6 +159,9 @@ export class FormSearch extends React.Component {
                 }
               }
             }
+            closeExpandedPanel={()=>{
+                this.setState({cardWebActived:-1});
+            }}
             expandedPanel={
               <DatePicker
                 onChange={(date)=>this.setState({cardWebActived:-1, returnDate:date})}
@@ -170,15 +182,23 @@ export class FormSearch extends React.Component {
                 }
               }
             }
+            closeExpandedPanel={()=>{
+                this.setState({cardWebActived:-1});
+            }}
             expandedPanel={
               <Passengers  
                 adult={adult}
                 children={children}
                 baby={baby}
-                onChangeAdult={(event)=>{
-                  this.setState({adult: parseInt(event.target.value)});
+                cabin={cabin}
+                onChangeCabin={(event)=>{
+                    this.setState({cabin: event.target.value});
+                  }
                 }
-              }
+                onChangeAdult={(event)=>{
+                    this.setState({adult: parseInt(event.target.value)});
+                  }
+                }
                 onChangeChildren={(event)=>{
                   this.setState({children: parseInt(event.target.value)});
                 }}
@@ -196,7 +216,7 @@ export class FormSearch extends React.Component {
                   to:airportArravie.airportCode,
                   outboundDate:moment(departureDate).format('YYYY-MM-DD'),
                   inboundDate:moment(returnDate).format('YYYY-MM-DD'),
-                  cabin:"EC",
+                  cabin:cabin,
                   adults:adult,
                   children:children,
                   infants:baby
@@ -218,6 +238,9 @@ export class FormSearch extends React.Component {
                 }
               }
             }
+            closeExpandedPanel={()=>{
+                this.setState({cardWebActived:-1});
+            }}
             expandedPanel={
             <div>
                 <SearchAirport 
@@ -246,6 +269,9 @@ export class FormSearch extends React.Component {
                 }
               }
             }
+            closeExpandedPanel={()=>{
+                this.setState({cardWebActived:-1});
+            }}
             expandedPanel={
               <DatePicker
                 onChange={(date)=>this.setState({cardWebActived:-1, departureDate:date})}
@@ -264,6 +290,9 @@ export class FormSearch extends React.Component {
                 }
               }
             }
+            closeExpandedPanel={()=>{
+                this.setState({cardWebActived:-1});
+            }}
             expandedPanel={
               <DatePicker
                 onChange={(date)=>this.setState({cardWebActived:-1, returnDate:date})}
@@ -281,11 +310,19 @@ export class FormSearch extends React.Component {
                 }
               }
             }
+            closeExpandedPanel={()=>{
+                this.setState({cardWebActived:-1});
+            }}
             expandedPanel={
               <Passengers  
                 adult={adult}
                 children={children}
                 baby={baby}
+                cabin={cabin}
+                onChangeCabin={(event)=>{
+                    this.setState({cabin: event.target.value});
+                  }
+                }
                 onChangeAdult={(event)=>{
                   this.setState({adult: parseInt(event.target.value)});
                 }
@@ -307,12 +344,12 @@ export class FormSearch extends React.Component {
                   to:airportArravie.airportCode,
                   outboundDate:moment(departureDate).format('YYYY-MM-DD'),
                   inboundDate:moment(returnDate).format('YYYY-MM-DD'),
-                  cabin:"EC",
+                  cabin:cabin,
                   adults:adult,
                   children:children,
                   infants:baby
                 }) 
-              }}  title={""} fullWidth/>
+              }}  title={"Pesquisar"} fullWidth/>
             {
               //icon={require('../../assets/icons/coins.png')}
             }

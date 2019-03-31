@@ -1,4 +1,8 @@
 .info{
     flex:1;
     white-space: normal!important;
+    text-align: center;
+    font-size: 12px;
+    color: #879395;
+    padding: 10px;
 }
