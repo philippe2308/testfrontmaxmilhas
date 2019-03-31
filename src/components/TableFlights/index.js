@@ -75,7 +75,7 @@ const RowTable =({data}) => {
             <div className="rowTable--web">
                 <CardRowTable title={data.airline} subtitle={data.flightNumber}/>
                 <CardRowTable title={moment(data.departureDate).format('HH:mm')} subtitle={data.from}/>
-                <CardRowTable title={`${duration._data.hours}H${duration._data.minutes}`} subtitle={`${data.stops===0?'Nenhuma':data.stops} parada${data.stops>1?'s':''}`}/>
+                <CardRowTable title={`${duration._data.hours}H${duration._data.minutes}`} subtitle={`${data.stops===0?'Voo direto':`${data.stops} parada`}${data.stops>1?'s':''}`}/>
                 <CardRowTable title={moment(data.arrivalDate).format('HH:mm')} subtitle={data.to}/>
                 <CardDetailRowTable web/>
                 <CardPriceRowTable web price={data.pricing}/>
