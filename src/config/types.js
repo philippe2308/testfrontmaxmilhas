@@ -1,4 +1,6 @@
 
-export const URL_API = 'http://api.mloc.com.br/new/?';
-export const URL_API2 = 'http://api.in-loc.com/hytrack_v2.php?user=matheus&password=1234&database=tracker&';
+export const URL_API = 'https://flight-price-hmg.maxmilhas.com.br';
+export const TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJtYXhtaWxoYXMuY29tLmJyIiwiaWF0IjoxNTA5MTIwMTAxLCJleHAiOjE1MTA0MTYxMDEsImF1ZCI6InRlc3RlLWZyb250ZW5kIiwic3ViIjoidGVzdGUtZnJvbnRlbmQiLCJlbnYiOiJobWcifQ.nM6wMem6dxF0CcDlig5iA9az5ZfmbXDjq1e4ypZXwjU';
+
+
 

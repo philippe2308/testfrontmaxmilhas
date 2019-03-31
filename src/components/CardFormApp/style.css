@@ -53,6 +53,8 @@
     border-top:0px solid #1abc9c;
     top: 123px;
 
+    background: #fff;
+
     position: absolute;
     z-index: 1000000px;
 }

@@ -66,6 +66,7 @@
     height: 20px;
 }
 .expanded__web{
+    background: #fff;
     width: 300px;
     border:1px solid #1abc9c;
     border-top:0px solid #1abc9c;

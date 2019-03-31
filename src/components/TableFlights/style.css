@@ -1,0 +1,22 @@
+.table{
+    width: calc(100% - 300px );
+    margin: 10px;
+}
+.cardHeaderTable{
+    width: calc(100% / 6);
+    border-left:1px solid rgb(117,129,131);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+.headerTable{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(135,147,149);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}

@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     border: rgb(216,220,222) 1px solid;
+    background-color: #fff;
 }
 .header__logo{
     font-size: 25px;
